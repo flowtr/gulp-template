@@ -35,9 +35,7 @@ gulp.task("sass", function () {
 
 gulp.task("img", () => gulp.src([paths.img.in]).pipe(gulp.dest(paths.img.out)));
 
-gulp.task("build", () =>
-    gulp.parallel([gulp.task("sass"), gulp.task("pug"), gulp.dest("img")])
-);
+gulp.task("build", gulp.parallel("sass", "pug", "img"));
 
 gulp.task("watch", function () {
     watch(paths.pug.in, { ignoreInitial: false }, gulp.series("pug"));

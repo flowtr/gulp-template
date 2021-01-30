@@ -4,10 +4,11 @@
     "version": "1.0.0",
     "description": "firenodes.com site",
     "scripts": {
-        "watch": "gulp watch"
+        "watch": "gulp watch",
+        "build": "gulp build"
     },
     "keywords": [],
-    "author": "",
+    "author": "Theo Paris",
     "license": "GPL-v3.0-or-later",
     "devDependencies": {
         "eslint": "^7.18.0",
