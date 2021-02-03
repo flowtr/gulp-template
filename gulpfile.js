@@ -2,6 +2,7 @@ const gulp = require("gulp");
 const pug = require("gulp-pug");
 const watch = require("gulp-watch");
 const sass = require("gulp-sass");
+const connect = require("gulp-connect");
 
 sass.compiler = require("node-sass");
 
@@ -42,3 +43,12 @@ gulp.task("watch", function () {
     watch(paths.sass.in, { ignoreInitial: false }, gulp.series("sass"));
     watch(paths.img.in, { ignoreInitial: false }, gulp.series("img"));
 });
+
+gulp.task("serve", () => {
+    connect.server({
+        livereload: true,
+        root: "public"
+    });
+});
+
+gulp.task("default", gulp.parallel(["watch", "serve"]));
