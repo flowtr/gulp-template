@@ -21,10 +21,14 @@ body {
 main {
     padding: 25px;
     padding-left: 50px;
+    padding-right: 50px;
     border-radius: 0.5em;
     background: rgba(0, 0, 0, 0.8);
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     min-height: 350px;
     height: auto;
     min-width: 75%;
