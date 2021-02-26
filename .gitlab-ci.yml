@@ -1,0 +1,15 @@
+image: creepinson/alpine-pnpm:latest
+
+# This folder is cached between builds
+# http://docs.gitlab.com/ee/ci/yaml/README.html#cache
+cache:
+  paths:
+    - node_modules/
+
+pages:
+  script:
+    - pnpm install
+    - pnpm run build
+  artifacts:
+    paths:
+      - public
