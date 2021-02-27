@@ -49,12 +49,13 @@ gulp.task("sass", function () {
 
 gulp.task("img", () => gulp.src([paths.img.in]).pipe(gulp.dest(paths.img.out)));
 
-gulp.task("build", gulp.parallel("sass", "pug", "img"));
+gulp.task("build", gulp.parallel("sass", "pug", "img", "ts"));
 
 gulp.task("watch", function () {
     watch(paths.pug.in, { ignoreInitial: false }, gulp.series("pug"));
     watch(paths.sass.in, { ignoreInitial: false }, gulp.series("sass"));
     watch(paths.img.in, { ignoreInitial: false }, gulp.series("img"));
+    watch(paths.ts.in, { ignoreInitial: false }, gulp.series("ts"));
 });
 
 gulp.task("serve", () => {
