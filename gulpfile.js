@@ -3,6 +3,8 @@ const pug = require("gulp-pug");
 const watch = require("gulp-watch");
 const sass = require("gulp-sass");
 const connect = require("gulp-connect");
+const ts = require("gulp-typescript");
+const tsProject = ts.createProject("tsconfig.json");
 
 sass.compiler = require("node-sass");
 
@@ -13,7 +15,18 @@ const paths = {
         in: "src/assets/images/**/*.{gif,jpg,png,svg}",
         out: "public/assets/images",
     },
+    ts: {
+        in: "src/assets/scripts/**/*.ts",
+        out: "public/assets/scripts",
+    },
 };
+
+gulp.task("ts", function () {
+    return tsProject
+        .src(paths.ts.in)
+        .pipe(tsProject())
+        .js.pipe(gulp.dest(paths.ts.out));
+});
 
 gulp.task("pug", function () {
     return gulp
@@ -47,7 +60,7 @@ gulp.task("watch", function () {
 gulp.task("serve", () => {
     connect.server({
         livereload: true,
-        root: "public"
+        root: "public",
     });
 });
 

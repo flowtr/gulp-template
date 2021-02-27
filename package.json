@@ -1,8 +1,8 @@
 {
-    "name": "@firenodes/site",
+    "name": "@firenodes/gulp-template",
     "private": true,
     "version": "1.0.0",
-    "description": "firenodes.com site",
+    "description": "Static website template made with gulp",
     "scripts": {
         "watch": "gulp watch",
         "dev": "gulp",
@@ -12,13 +12,15 @@
     "author": "Theo Paris",
     "license": "GPL-v3.0-or-later",
     "devDependencies": {
-        "eslint": "^7.18.0",
+        "eslint": "^7.20.0",
         "gulp": "^4.0.2",
         "gulp-connect": "^5.7.0",
         "gulp-pug": "^4.0.1",
         "gulp-sass": "^4.1.0",
+        "gulp-typescript": "^6.0.0-alpha.1",
         "gulp-watch": "^5.0.1",
         "node-sass": "^5.0.0",
-        "prettier": "^2.2.1"
+        "prettier": "^2.2.1",
+        "typescript": "^4.2.2"
     }
 }

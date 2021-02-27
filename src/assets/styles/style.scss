@@ -1,11 +1,13 @@
 body {
     color: #fff;
+    background-color: #212121;
 }
 
 #header {
-    background: #212121;
+    background: #2d2d2d;
     width: 100%;
     padding: 15px;
+    min-height: 125px;
     padding-left: 50px;
     margin-bottom: 25px;
     display: flex;
@@ -23,7 +25,7 @@ main {
     padding-left: 50px;
     padding-right: 50px;
     border-radius: 0.5em;
-    background: rgba(0, 0, 0, 0.8);
+    background: #121212;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,7 +38,6 @@ main {
 }
 
 .navbar-brand {
-    margin-right: 100px;
     width: 100px;
 }
 
@@ -50,21 +51,12 @@ main {
     height: auto;
 }
 
-.fire-bg {
-    background: linear-gradient(270deg, #ed6d32, #ed9f32, #ec1212);
-    background-size: 600% 600%;
-
-    animation: fire 11s ease infinite;
+.nav-dark-menu {
+    width: 25%;
+    margin-right: 25px;
 }
 
-@keyframes fire {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+.navbar-toggler {
+    margin-bottom: 15px;
+    margin-top: 15px;
 }

@@ -1,0 +1,6 @@
+mixin nav-item(name, link)
+    if link === undefined
+        - link = "#"
+    li.nav-item
+        a.nav-link.active(aria-current="page" href=link)
+            p= name
